@@ -61,9 +61,7 @@ summary_tables$houses_summary
 
 # Export each summary table into a separate csv file
 for(i in 1:length(summary_tables))
-{
   write.csv(summary_tables[i], paste(sep="", names(summary_tables)[i], ".csv"))
-}
 
 
 
