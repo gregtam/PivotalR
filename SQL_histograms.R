@@ -123,18 +123,26 @@ querystring = paste(querystring, "WHEN earns >=", bucket_indices[i], "AND earns 
 
 querystring = paste(querystring,
                     "END AS buckets FROM census1billion_rand) foo;
-                    SELECT buckets, COUNT(buckets)
-                    FROM earns_hist
-                    GROUP BY buckets
-                    ORDER BY buckets;")
+                     SELECT buckets, COUNT(buckets)
+                       FROM earns_hist
+                      GROUP BY buckets
+                      ORDER BY buckets;")
 
 hist_vals = dbGetQuery(con, querystring)
 
-ggplot(hist_vals) + 
-  geom_bar(aes(bucket_indices[buckets], count), stat="identity") + 
-  xlab("Earns") + 
-  ylab("Count") + 
-  ggtitle("Custom Histogram for Earns")
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
