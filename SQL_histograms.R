@@ -130,19 +130,11 @@ querystring = paste(querystring,
 
 hist_vals = dbGetQuery(con, querystring)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+ggplot(hist_vals) + 
+  geom_bar(aes(bucket_indices[buckets], count), stat="identity") + 
+  xlab("Earns") + 
+  ylab("Count") + 
+  ggtitle("Custom Histogram for Earns")
 
 
 
