@@ -64,5 +64,8 @@ for(i in 1:length(summary_tables))
   write.csv(summary_tables[i], paste(sep="", names(summary_tables)[i], ".csv"))
 
 
-
+# To write the original table along with its summary in a csv file, use the following
+# write.csv(houses_summary, "temp.csv")
+# cat("\n", file = "temp.csv", append = TRUE) # writes a blank line to separate
+# write.table(houses_summary, "temp.csv", sep=", ", append=TRUE, col.names = NA)
 

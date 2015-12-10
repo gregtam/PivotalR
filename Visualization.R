@@ -137,7 +137,7 @@ end - start
 # over the entire 1 billion row dataset!
 head(fulldf_avg)
 
-#Let's plot the same plots as above using the full dataset:
+# Let's plot the same plots as above using the full dataset:
 
 ggplot(fulldf_avg) + 
   geom_tile(aes(factor(rooms), factor(bedrms), fill = avg_earns)) + 
